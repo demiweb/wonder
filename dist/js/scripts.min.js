@@ -14,6 +14,304 @@ function allLozadImg() {
 }
 
 allLozadImg();
+//full scroll script
+let dotText = [...document.querySelectorAll('main .dot')];
+let objDots = {};
+
+function writeDotText() {
+    if (dotText.length) {
+        dotText.forEach((it, i) => {
+            it.dataset.dots = i;
+            let text = it.innerHTML;
+            let textLength = text.length;
+            let speed = 60;
+            objDots[i] = text;
+            let hei = it.offsetHeight;
+            it.style.minHeight = `${hei}px`;
+            it.innerHTML = '';
+
+            // typeWriter(i, text);
+            // console.log(objDots);
+
+        })
+    }
+}
+
+writeDotText();
+
+//dots
+
+let jsAnimDots = [...document.querySelectorAll('main .dot')];
+var VisibleDot = function (target, k) {
+    if (!jsAnimDots.length) {
+
+    } else {
+
+        var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top + 90,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset + 40,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            if (target.classList.contains('over')) {
+            } else {
+                setTimeout(() => {
+                    target.classList.add('over');
+                    var typed = new Typed(target, {
+                        strings: [`${objDots[k]}`],
+                        typeSpeed: 40,
+                        showCursor: false,
+                        startDelay: k * 120,
+                    });
+                }, 60)
+            }
+
+
+
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            // document.querySelector('.mobile-header-contacts').classList.remove('unvisible');
+        }
+    }
+    // Все позиции элемента
+
+};
+
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function () {
+    jsAnimDots.forEach((el, k) => {
+        setTimeout(() => {
+            VisibleDot(el, k);
+        }, k * 30)
+    })
+
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+
+jsAnimDots.forEach((el, k) => {
+    setTimeout(() => {
+        VisibleDot(el, k);
+    }, k * 30)
+});
+
+//dots
+//blocks
+
+let jsAnimSqr = [...document.querySelectorAll('.block')];
+var VisibleSqr = function (target, k) {
+    if (!jsAnimSqr.length) {
+
+    } else {
+
+        var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top + 90,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset + 40,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            setTimeout(() => {
+                [...target.querySelectorAll('div')].forEach((bl) => {
+                    bl.classList.add('done')
+                });
+                target.classList.add('animed');
+
+            }, 60)
+
+
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            // document.querySelector('.mobile-header-contacts').classList.remove('unvisible');
+        }
+    }
+    // Все позиции элемента
+
+};
+
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function () {
+    jsAnimSqr.forEach((el, k) => {
+        setTimeout(() => {
+            VisibleSqr(el, k);
+        }, k * 30)
+    })
+
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+
+jsAnimSqr.forEach((el, k) => {
+    setTimeout(() => {
+        VisibleSqr(el, k);
+    }, k * 30)
+});
+
+//blocks
+
+new fullpage('#fullpage', {
+    //options here
+
+    anchors: ['company', 'target', 'production', 'nutrition', 'partners'],
+    menu: '.menu-links',
+    navigation: true,
+    // autoScrolling: true,
+    // scrollHorizontally: true,
+    // verticalCentered: false,
+    css3: true,
+
+    responsiveWidth: 850,
+    afterLoad: function () {
+        dotText = [...document.querySelectorAll('.section.active .dot')];
+        dotText.forEach((it, k) => {
+            let dat = it.dataset.dots;
+            if (it.classList.contains('done')) {
+
+
+            } else {
+                var typed = new Typed(it, {
+                    strings: [`${objDots[dat]}`],
+                    typeSpeed: 40,
+                    showCursor: false,
+                    startDelay: k * 200,
+                });
+                it.classList.add('done');
+            }
+        });
+        let secBlocks = [...document.querySelectorAll('.section.active .anim-blocks > *')];
+        let secBlock = document.querySelector('.section.active .anim-blocks');
+        secBlock.classList.add('animed');
+        secBlocks.forEach((bl, l) => {
+            setTimeout(() => {
+                bl.classList.add('done');
+            }, l * 70);
+
+        });
+        let secBlockMain = document.querySelector('.section.active');
+        secBlockMain.classList.add('doned');
+        let blAnim = [...document.querySelectorAll('.section.active .bl-anim')];
+        blAnim.forEach((blm, k) => {
+            setTimeout(() => {
+                blm.classList.add('doned');
+            }, k * 60)
+        });
+        let prodBl = [...document.querySelectorAll('.section.active .hero-prod__item')];
+
+        prodBl.forEach((bl, k) => {
+            setTimeout(() => {
+                bl.classList.remove('animed');
+            }, k * 60)
+        });
+        let nutLinks = [...document.querySelectorAll('.section.active .link')];
+
+        nutLinks.forEach((bl, k) => {
+            setTimeout(() => {
+                bl.classList.add('doned');
+            }, k * 90)
+        });
+        let nutFaded = [...document.querySelectorAll('.section.active .fadeT')];
+
+        nutFaded.forEach((bl, k) => {
+            setTimeout(() => {
+                bl.classList.add('doned');
+            }, k * 90)
+        })
+
+    }
+});
+
+
+//full scroll script
+//let anim functions
+let jsAnimBlocks = [...document.querySelectorAll('.js-anim')];
+var Visible3 = function (target) {
+    if (!jsAnimBlocks.length) {
+
+    } else {
+
+        var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top + 90,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset + 40,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            setTimeout(() => {
+                target.classList.add('anim-start');
+            }, 60)
+
+
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            // document.querySelector('.mobile-header-contacts').classList.remove('unvisible');
+        }
+    }
+    // Все позиции элемента
+
+};
+
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function () {
+    jsAnimBlocks.forEach((el, k) => {
+        setTimeout(() => {
+            Visible3(el);
+        }, k * 30)
+    })
+
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+
+jsAnimBlocks.forEach((el, k) => {
+    setTimeout(() => {
+        Visible3(el);
+    }, k * 30)
+});
+
+
+
+//let anim functions
+
 
 
 //header
@@ -27,7 +325,7 @@ function checkScrollDir() {
     newValue = window.pageYOffset;
     // console.log(window.pageYOffset + ' pageoffset')
     if (window.innerWidth > 1050) {
-        document.documentElement.scrollTop
+        document.documentElement.scrollTop;
         // console.log( + 'scrolled from top');
         if (document.body.querySelector('.header')) {
 
@@ -182,21 +480,78 @@ hoverProdHome();
 //hovering
 
 
-//full scroll script
-
-new fullpage('#fullpage', {
-    //options here
-
-    anchors: ['company', 'target', 'production', 'nutrition', 'partners'],
-    menu: '.menu-links',
-    navigation: true,
-    // autoScrolling: true,
-    // scrollHorizontally: true,
-    // verticalCentered: false,
-    css3: true,
-
-    responsiveWidth: 760,
-});
 
 
-//full scroll script
+//dots text writing
+
+
+//dots text writing
+//click events
+
+//modals
+let modBtn = [...document.querySelectorAll('.btn-mod')];
+
+function openModal() {
+    if (modBtn.length) {
+        modBtn.forEach((btn, k) => {
+
+            let dataMod = btn.dataset.modal;
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                let modal = document.querySelector(`.modal-window[data-type="${dataMod}"]`);
+                modal.classList.add('visible');
+                if (document.querySelector('#fullpage')) {
+                    fullpage_api.setAllowScrolling(false);
+                    fullpage_api.setKeyboardScrolling(false);
+
+                }
+                document.querySelector('body').classList.add('no-scroll');
+            });
+
+        })
+    }
+}
+
+openModal();
+let modBack = [...document.querySelectorAll('.modal-backplate')];
+let modClose = [...document.querySelectorAll('.modal-close')];
+
+function closeModal() {
+    if (modBack.length) {
+        modBack.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.modal-window').classList.remove('visible');
+                document.querySelector('body').classList.remove('no-scroll');
+
+                if (document.querySelector('#fullpage')) {
+                    fullpage_api.setAllowScrolling(true);
+                    fullpage_api.setKeyboardScrolling(true);
+
+                }
+            })
+        });
+        modClose.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.modal-window').classList.remove('visible');
+                document.querySelector('body').classList.remove('no-scroll');
+
+                if (document.querySelector('#fullpage')) {
+                    fullpage_api.setAllowScrolling(true);
+                    fullpage_api.setKeyboardScrolling(true);
+
+                }
+            })
+        })
+    }
+}
+closeModal();
+
+//modals
+
+
+//click events

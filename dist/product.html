@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="./libs/swiper.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
-<body class="home">
+<body>
 
 <header class="header is-fixed">
     <div class="header-container">
@@ -125,370 +125,397 @@
 </header>
 
 <main>
-    <div class="home-wrapper">
-        <div class="home-menu js-anim anim-right">
-            <div class="menu-links">
-                <a href="" data-menuanchor="company">Компанія</a>
-                <a href="" data-menuanchor="target">Цілі</a>
-                <a href="" data-menuanchor="production">Продукція</a>
-                <a href="" data-menuanchor="nutrition">Живлення</a>
-                <a href="" data-menuanchor="partners">Партнерам</a>
-            </div>
+    <section class="product" style="--col1: #7B5F9E;">
+        <div class="container">
+            <div class="product__head js-anim anim-blur">
+                <div class="breadcrumbs">
 
-            <div class="header-soc">
-                <ul>
-                    <li><a href=""><img src="./img/tg-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/vb-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/fb-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/in-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/yt-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/ln-1.svg" alt=""></a></li>
-                    <li><a href=""><img src="./img/tw-1.svg" alt=""></a></li>
-                </ul>
+                    <ul>
+                        <li><a href="">Wonder</a></li>
+                        <li><a href="">Продукція</a></li>
+                        <li><a href="">Рідкі</a></li>
+                        <li><span>Wonder Leaf Mono B 11</span></li>
+                    </ul>
+                </div>
+                <a href="" data-modal="catalog" class="cat-mod btn-mod">
+                    <p>Завантажити каталог продукції PDF</p>
+                    <img src="./img/pdf-b.svg" alt="">
+                </a>
+            </div>
+            <div class="product__wrapper">
+                <div class="product-content">
+                    <div class="product-image js-anim anim-fadeR">
+                        <div class="img">
+                            <img data-fancybox href="./img/prod.png" class="lazyload" data-src="./img/prod.png" alt="">
+                        </div>
+                    </div>
+                    <div class="product-name js-anim anim-fadeT">
+                        <h1>Wonder Leaf Mono B 11</h1>
+                        <p>Удобрение для внекорневой подкормки</p>
+                    </div>
+                    <div class="product-short js-anim anim-fadeT">
+                        <ul>
+                            <li><strong>Форма: </strong>Рідке добриво</li>
+                            <li><strong>Пакування: </strong>20л, 1000л</li>
+                        </ul>
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                    <a href="" class="btn-tube js-anim anim-blur">
+                        <img src="./img/yt-big.svg" alt="">
+                        <p>Детальніше про продукт дивись на YouTube</p>
+                    </a>
+                    <a href="" data-modal="order" class="btn-order btn-mod js-anim anim-blur">
+                        <p>Замовити добриво</p>
+                        <img src="./img/arr-w-big.svg" alt="">
+                    </a>
+                </div>
+                <div class="block anim-blocks">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-btns js-anim anim-fadeR">
+                    <div class="product-btn tab-btn ">
+                        <p>Склад</p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+                    </div>
+                    <div class="product-btn tab-btn active">
+                        <p>Фази та норми внесення добрив</p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+                    </div>
+                    <div class="product-btn tab-btn ">
+                        <p>Опис продукту</p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+                    </div>
+                </div>
+                <div class="product-tab__wrap js-anim anim-fadeT">
+                    <div class="product-tab item-tab ">
+                        <div class="tab-name">
+                            Склад
+                        </div>
+                        <div class="product-comp">
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>1%</span>
+                                        <p><small>Амінокислоти</small></p>
+                                    </div>
+                                    <p>Амінокислоти рослинного походження</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>11%</span>
+                                        <p>B</p>
+                                    </div>
+                                    <p>Бор (В), водорозчинний</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>1,37</span>
+                                        <p><small>кг/л</small></p>
+                                    </div>
+                                    <p>Густина</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>5%</span>
+                                        <p>N</p>
+                                    </div>
+                                    <p>Азот загальний (N)</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>1,37</span>
+                                        <p><small>кг/л</small></p>
+                                    </div>
+                                    <p>Густина</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>5%</span>
+                                        <p>N</p>
+                                    </div>
+                                    <p>Азот загальний (N)</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>1%</span>
+                                        <p><small>Амінокислоти</small></p>
+                                    </div>
+                                    <p>Амінокислоти рослинного походження</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>11%</span>
+                                        <p>B</p>
+                                    </div>
+                                    <p>Бор (В), водорозчинний</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>5%</span>
+                                        <p>N</p>
+                                    </div>
+                                    <p>Азот загальний (N)</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>1,37</span>
+                                        <p><small>кг/л</small></p>
+                                    </div>
+                                    <p>Густина</p>
+                                </div>
+                            </div>
+                            <div class="single-comp">
+                                <div class="prod-prev__single">
+                                    <div class="prod-prev__type">
+                                        <span>5%</span>
+                                        <p>N</p>
+                                    </div>
+                                    <p>Азот загальний (N)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+
+                    </div>
+                    <div class="product-tab item-tab active">
+                        <div class="tab-name">Фази та норми внесення добрив:</div>
+                        <div class="product-phases">
+                            <div class="product-phase">
+                                <span>Озимый и яровый рапс</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph1.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Сахарная свекла</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph2.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Кукуруза</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph3.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Озимые и яровые зерновые</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph4.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-phase">
+                                <span>Озимый и яровый рапс</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph1.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Сахарная свекла</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph2.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Кукуруза</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph3.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-phase">
+                                <span>Озимые и яровые зерновые</span>
+                                <div class="phase-line">
+                                    <div class="img">
+                                        <img src="./img/ph4.svg" alt="">
+                                    </div>
+                                    <div class="phase-list">
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+                                        <div class="single-phase">
+                                            <p>ВВСН 13-19 <br>
+                                                (Формиро-вание листовой розетки) <strong>2-3 л/га</strong></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="product-tab item-tab ">
+                        <div class="tab-name"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="full-sections" id="fullpage">
-            <div class="section" data-anchor="company">
-                <section class="hero-home">
-                    <div class="bg">
-                        <img class="lazyload" data-src="./img/hero-1.jpg" alt="">
-                    </div>
-
-                    <div class="hero-content">
-                        <div class="hero-text">
-                            <p data-end='.' class="hero-title dot">Wonder</p>
-                            <span data-end='.' class="dot hero-sub">І Земля
-пишається</span>
-                            <div class="star bl-anim white">
-                                <p>За високою якістю нашого продукту стоять найкращі технологи-хіміки
-                                    та найсучасніші лабораторії.</p>
-
-                            </div>
-
-
-                        </div>
-                        <div class="btn-hero">
-                            <a href="">детальніше про компанію</a>
-                        </div>
-                    </div>
-                    <div class="block anim-blocks white">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </section>
-            </div>
-            <div class="section" data-anchor="target">
-                <section class="hero-home">
-                    <div class="bg">
-                        <img class="lazyload" data-src="./img/hero-2.jpg" alt="">
-                    </div>
-                    <div class="hero-content">
-                        <div class="sub-hero-text">
-                            <p class="sub-hero-sub dot" data-end='.'>
-                                Ми прагнемо стати брендом №1 серед добрив у світі</p>
-                            <div class="star white bl-anim">
-                                <p>Це означає, що на кожному столі на цій планеті має бути хоча б один продукт,
-                                    вирощений за допомогою WONDER</p>
-                            </div>
-                        </div>
-                        <div class="sub-hero-list">
-                            <div class="star bl-anim">
-                                <span>ЯКІСТЬ</span>
-                                <p>Виробляємо добрива із кращої сировини та використовуємо тільки сучасні
-                                    технології.</p>
-                            </div>
-                            <div class="star bl-anim">
-                                <span>CLIENT SERVICE </span>
-                                <p>Ми не залишаємо клієнта сам
-                                    на сам з проблемами, а зажди вирішуємо їх разом.</p>
-                            </div>
-                            <div class="star bl-anim">
-                                <span>УПЕВНЕНІСТЬ</span>
-                                <p>Завжди збільшуємо врожай!
-                                    Наша місія полягає в тому, щоб нагодувати всю планету!</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="block anim-blocks white">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </section>
-            </div>
-            <div class="section" data-anchor="production">
-                <section class="hero-home">
-                    <div class="hero-content">
-                        <div class="hero-prod-head">
-                            <p data-end="." class="sub-hero-sub dot black">Продукт</p>
-                            <div class="star black bl-anim">
-                                <p>Наш продукт — сучасні мінеральні добрива високої якості. Це збалансоване харчування
-                                    для
-                                    рослин.</p>
-                            </div>
-                        </div>
-                        <div class="hero-prod__list">
-                            <a href="" class="hero-prod__item animed">
-                                <div class="head">
-                                    <p>Wonder Leaf
-                                    </p>
-                                    <span>кристалічні</span>
-                                    <span>рідкі</span>
-                                </div>
-                                <div class="img" style="background: #FFD60B">
-                                    <img class="lazyload" data-src="./img/h-p-1.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>Виробляємо добрива із кращої сировини та використовуємо тільки сучасні
-                                        технології.</p>
-                                </div>
-                            </a>
-                            <a href="" class="hero-prod__item animed">
-                                <div class="head">
-                                    <p>Wonder Soil</p>
-                                    <span>гранульовані</span>
-                                </div>
-                                <div class="img" style="background: #FF7F32">
-                                    <img class="lazyload" data-src="./img/h-p-1.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>Виробляємо добрива із кращої сировини та використовуємо тільки сучасні
-                                        технології.</p>
-                                </div>
-                            </a>
-                            <a href="" class="hero-prod__item animed">
-                                <div class="head">
-                                    <p>Wonder Aqua</p>
-                                    <span>ад’юванти (поверхнево активні та допоміжні речовини)</span>
-                                </div>
-                                <div class="img" style="background: #995DD4">
-                                    <img class="lazyload" data-src="./img/h-p-1.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>Виробляємо добрива із кращої сировини та використовуємо тільки сучасні
-                                        технології.</p>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div class="block anim-blocks ">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </section>
-
-            </div>
-            <div class="section" data-anchor="nutrition">
-                <section class="hero-home">
-                    <div class="hero-content">
-                        <div class="hero-culture">
-                            <p data-end="." class="sub-hero-sub dot black">Живлення культур</p>
-                            <div class="star black bl-anim">
-                                <p>Виробляємо добрива із кращої сировини та використовуємо тільки сучасні
-                                    технології.</p>
-                            </div>
-                        </div>
-                        <a href="" class="culture-link link">
-                            <div class="img">
-                                <img class="lazyload" data-src="./img/c-1.png" alt="">
-                            </div>
-                        </a>
-                        <a href="" class="culture-link link">
-                            <div class="img">
-                                <img class="lazyload" data-src="./img/c-2.png" alt="">
-                            </div>
-                        </a>
-                        <a href="" class="culture-link link">
-                            <div class="img">
-                                <img class="lazyload" data-src="./img/c-3.png" alt="">
-                            </div>
-                        </a>
-                        <a href="" class="culture-link link">
-                            <div class="img">
-                                <img class="lazyload" data-src="./img/c-4.png" alt="">
-                            </div>
-                        </a>
-                        <a href="" class="culture-link link">
-                            <div class="img">
-                                <img class="lazyload" data-src="./img/c-5.png" alt="">
-                            </div>
-                        </a>
-                        <a href="" class="culture-link link purple">
-                            <p>Більше культур</p>
-                        </a>
-                    </div>
-                    <div class="block anim-blocks ">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </section>
-            </div>
-            <div class="section" data-anchor="partners">
-                <section class="hero-home">
-                    <div class="hero-content">
-                        <div class="hero-partners">
-                            <div class="text-partners">
-                                <p class="dot sub-hero-sub black" data-end="?">Цікавлять умови співпраці</p>
-                                <div class="star black bl-anim">
-                                    <p>Партнери — це наші клієнти та постачальники, про яких ми піклуємось і які
-                                        визначають наш шлях.</p>
-                                </div>
-                                <a href="" class="number bl-anim">+38 067 0000 304</a>
-                                <a href="" class="mail bl-anim">info@wonder-corporation.com</a>
-                                <a href="" data-modal="call" class="mod-call btn-mod bl-anim">ЗВОРОТНІЙ
-                                    ЗВ’ЯЗОК</a>
-                            </div>
-                        </div>
-                        <div class="part-img">
-                            <div class="img fadeT">
-                                <img class="lazyload" data-src="./img/part-img.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block anim-blocks ">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </section>
-            </div>
-
-        </div>
-        <div class="scroll-ic">
-            <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect class="rect" x="0.5" y="0.5" width="19" height="31" rx="9.5"/>
-                <path class="path" d="M10 8L10 15" stroke-width="2"/>
-            </svg>
-        </div>
-        <div data-modal="call" class="mod-call btn-mod corner-call">
-            <img src="./img/call-ic.svg" alt="">
-        </div>
-
-    </div>
-
-
+    </section>
 </main>
 <div class="backplate-menu"></div>
 

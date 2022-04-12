@@ -33,14 +33,30 @@
                 </div>
                 <div class="hero-star__text">
                     <svg width="602" height="352" viewBox="0 0 602 352" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse id="motion" class="st0" cx="301" cy="175.3" rx="291.7" ry="164.5"/>
+                        <!--                        <path id="motion" d="M579.7,132c-24-46.2-92.4-114.1-287.1-122.9c0,0-189.8-1-264.7,109.9c-24.1,35.6-22.8,82.5,4,116.2-->
+                        <!--	c25.9,32.6,76.3,74.5,179.7,95.2c69.2,13.9,140.7,12.9,209.1-4.3C486,309.8,556.9,277,583.4,211.3-->
+                        <!--	C593.7,185.5,592.5,156.7,579.7,132z" fill="red"/>-->
+                        <!--                        <circle id="circle" r="10" cx="0" cy="0" fill="tomato"/>-->
 
-                        <path d="M0.976562 146.587L2.27889 143.012L20.1859 147.563L20.1859 147.238L4.23238 137.812L5.86028 133.586L24.0928 137.162L24.0928 136.837L7.48819 128.386L8.79052 124.811L28.3254 135.537L26.6975 140.737L9.76726 137.162L9.76726 137.487L24.744 146.262L22.7905 151.463L0.976562 146.587Z"
-                              fill="black">
-                            <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-reverse">
-                                <mpath xlink:href="#motion"></mpath>
-                            </animateMotion>
-                        </path>
+                        <!--                        <animateMotion-->
+                        <!--                                xlink:href="#circle"-->
+                        <!--                                dur="5s"-->
+                        <!--                                begin="0s"-->
+                        <!--                                fill="freeze"-->
+                        <!--                                repeatCount="indefinite">-->
+                        <!--                            <mpath xlink:href="#motion"/>-->
+                        <!--                        </animateMotion>-->
+
+
+                        <path id="bw"
+                              d="M0.976562 146.587L2.27889 143.012L20.1859 147.563L20.1859 147.238L4.23238 137.812L5.86028 133.586L24.0928 137.162L24.0928 136.837L7.48819 128.386L8.79052 124.811L28.3254 135.537L26.6975 140.737L9.76726 137.162L9.76726 137.487L24.744 146.262L22.7905 151.463L0.976562 146.587Z"
+                              fill="black"/>
+
+
+                        <animateMotion xlink:href="#bw" dur="6s" repeatCount="indefinite" rotate="auto-reverse">
+                            <mpath xlink:href="#motion"></mpath>
+                        </animateMotion>
+
 
                         <path d="M36.4651 124.161C35.4884 125.461 34.5116 126.436 33.5349 127.411C32.5582 128.061 31.2558 128.711 29.9535 128.711C28.6512 129.036 27.3489 128.711 25.721 128.386C24.4186 128.061 22.7907 127.411 21.4884 126.436C19.8605 125.461 18.8837 124.486 17.907 123.186C16.9303 121.885 16.2791 120.91 15.9535 119.61C15.6279 118.31 15.6279 117.01 15.6279 115.71C15.9535 114.41 16.2791 113.11 17.2558 111.81C18.2326 110.51 19.2093 109.534 20.1861 108.559C21.1628 107.909 22.4651 107.259 23.7675 107.259C25.0698 106.934 26.3721 107.259 28 107.584C29.3023 107.909 30.9303 108.559 32.2326 109.534C33.8605 110.51 34.8372 111.485 35.814 112.785C36.7907 114.085 37.4419 115.06 37.7675 116.36C38.093 117.66 38.093 118.96 38.093 120.26C37.7675 121.56 37.1163 122.861 36.4651 124.161ZM33.2093 122.211C34.1861 120.91 34.5116 119.61 34.1861 117.985C33.8605 116.685 32.8837 115.385 31.2558 114.41L28.3256 112.46C26.6977 111.485 25.0698 110.835 23.7675 111.16C22.4651 111.485 21.1628 112.135 20.1861 113.76C19.2093 115.06 18.8837 116.36 19.2093 117.985C19.5349 119.285 20.5117 120.585 22.1396 121.56L25.0698 123.511C26.6977 124.486 28.3256 125.136 29.6279 124.811C31.2558 124.161 32.5582 123.511 33.2093 122.211Z"
                               fill="black"/>
@@ -173,15 +189,15 @@
         <div class="container">
             <div class="catalog-list">
 
-                <div class="single-product">
-                    <a href="" class="prev" style="--bg: #F8D335; --col: #000;">
+                <div class="single-product js-anim anim-fadeT" style="--bg: #F8D335; --col: #000;">
+                    <a href="" class="prev">
                         <div class="img">
                             <img class="lazyload" data-src="./img/ct1.png" alt="">
                         </div>
                         <p>Докладніше про продукт</p>
                     </a>
                     <div class="prod-prev">
-                        <span>Wonder Leaf Mono <br>B 11</span>
+                        <a href="">Wonder Leaf Mono <br>B 11</a>
                         <ul>
                             <li><strong>Форма:</strong> Рідке добриво</li>
                             <li><strong>Пакування:</strong> 20л, 1000л</li>
@@ -249,15 +265,15 @@
                         <p>Містить фітогормони, полісахариди і прилипач</p>
                     </div>
                 </div>
-                <div class="single-product">
-                    <a href="" class="prev" style="--bg: #50702D; --col: #fff;">
+                <div class="single-product js-anim anim-fadeT" style="--bg: #50702D; --col: #fff;">
+                    <a href="" class="prev">
                         <div class="img">
                             <img class="lazyload" data-src="./img/ct1.png" alt="">
                         </div>
                         <p>Докладніше про продукт</p>
                     </a>
                     <div class="prod-prev">
-                        <span>Wonder Leaf Mono <br>Zn 8</span>
+                        <a href="">Wonder Leaf Mono <br>Zn 8</a>
                         <ul>
                             <li><strong>Форма:</strong> Рідке добриво</li>
                             <li><strong>Пакування:</strong> 20л, 1000л</li>
@@ -298,15 +314,15 @@
                         <p>Містить фітогормони, полісахариди і прилипач</p>
                     </div>
                 </div>
-                <div class="single-product">
-                    <a href="" class="prev" style="--bg: #7D9091; --col: #fff;">
+                <div class="single-product js-anim anim-fadeT" style="--bg: #7D9091; --col: #fff;">
+                    <a href="" class="prev">
                         <div class="img">
                             <img class="lazyload" data-src="./img/ct1.png" alt="">
                         </div>
                         <p>Докладніше про продукт</p>
                     </a>
                     <div class="prod-prev">
-                        <span>Wonder Leaf <br>Wonder Macro</span>
+                        <a href="">Wonder Leaf <br>Wonder Macro</a>
                         <ul>
                             <li><strong>Форма:</strong> Рідке добриво</li>
                             <li><strong>Пакування:</strong> 20л, 1000л</li>
@@ -347,15 +363,15 @@
                         <p>Містить фітогормони, полісахариди і прилипач</p>
                     </div>
                 </div>
-                <div class="single-product">
-                    <a href="" class="prev" style="--bg: #D81920; --col: #fff;">
+                <div class="single-product js-anim anim-fadeT" style="--bg: #D81920; --col: #fff;">
+                    <a href="" class="prev">
                         <div class="img">
                             <img class="lazyload" data-src="./img/ct1.png" alt="">
                         </div>
                         <p>Докладніше про продукт</p>
                     </a>
                     <div class="prod-prev">
-                        <span>Wonder Leaf Mono <br>Fe 10</span>
+                        <a href="">Wonder Leaf Mono <br>Fe 10</a>
                         <ul>
                             <li><strong>Форма:</strong> Рідке добриво</li>
                             <li><strong>Пакування:</strong> 20л, 1000л</li>
@@ -391,6 +407,131 @@
                                 <p>Азот загальний (N)</p>
                             </div>
 
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #7C609E; --col: #fff;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf <br>Wonder Micro</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #F8D335; --col: #000;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf Mono <br>B 11</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
                         </div>
 
                         <p>Містить фітогормони, полісахариди і прилипач</p>
@@ -399,8 +540,447 @@
             </div>
         </div>
     </section>
+    <section class="company-stat">
+        <div class="container">
+            <div class="company-stat__cont">
+                <div class="img big">
+                    <img class="lazyload" data-src="./img/moje1.jpg" alt="">
+                </div>
+                <div class="img mini">
+                    <img class="lazyload" data-src="./img/moje2.jpg" alt="">
+                </div>
+                <div class="company-stat__text">
+                    <span>
+WONDER <br>може так
+                    </span>
+                    <ul>
+                        <li><span>МІНЕРАЛЬНІ <br>ДОБРИВА</span>
+                            <p>30 000<small>ТОНН/РІК</small></p>
+                        </li>
+                        <li><span>РІДКІ <br>ДОБРИВА</span>
+                            <p>6 000<small>ТОНН/РІК</small></p>
+                        </li>
+                    </ul>
 
+                </div>
+                <div class="placehol"></div>
+                <a href="" data-modal="catalog" class="mod-cat btn-mod">
+                    <p>Завантажити каталог продукції PDF</p>
+                    <img src="./img/pdf-b.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-list">
 
+                <div class="single-product js-anim anim-fadeT" style="--bg: #F8D335; --col: #000;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf Mono <br>B 11</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #50702D; --col: #fff;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf Mono <br>Zn 8</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #7D9091; --col: #fff;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf <br>Wonder Macro</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #D81920; --col: #fff;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf Mono <br>Fe 10</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #7C609E; --col: #fff;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf <br>Wonder Micro</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+                <div class="single-product js-anim anim-fadeT" style="--bg: #F8D335; --col: #000;">
+                    <a href="" class="prev">
+                        <div class="img">
+                            <img class="lazyload" data-src="./img/ct1.png" alt="">
+                        </div>
+                        <p>Докладніше про продукт</p>
+                    </a>
+                    <div class="prod-prev">
+                        <a href="">Wonder Leaf Mono <br>B 11</a>
+                        <ul>
+                            <li><strong>Форма:</strong> Рідке добриво</li>
+                            <li><strong>Пакування:</strong> 20л, 1000л</li>
+                        </ul>
+
+                        <div class="prod-prev__info">
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1%</span>
+                                    <p><small>Амінокислоти</small></p>
+                                </div>
+                                <p>Амінокислоти рослинного походження</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>11%</span>
+                                    <p>B</p>
+                                </div>
+                                <p>Бор (В), водорозчинний</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>1,37</span>
+                                    <p><small>кг/л</small></p>
+                                </div>
+                                <p>Густина</p>
+                            </div>
+                            <div class="prod-prev__single">
+                                <div class="prod-prev__type">
+                                    <span>5%</span>
+                                    <p>N</p>
+                                </div>
+                                <p>Азот загальний (N)</p>
+                            </div>
+                        </div>
+
+                        <p>Містить фітогормони, полісахариди і прилипач</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section js-anim anim-fadeT partners-block" data-anchor="partners">
+        <section class="hero-home">
+            <div class="hero-content">
+                <div class="hero-partners">
+                    <div class="text-partners">
+                        <p class="dot sub-hero-sub black" data-end="?">Цікавлять умови співпраці</p>
+                        <div class="star black ">
+                            <p>Партнери — це наші клієнти та постачальники, про яких ми піклуємось і які
+                                визначають наш шлях.</p>
+                        </div>
+                        <a href="" class="number ">+38 067 0000 304</a>
+                        <a href="" data-modal="call" class="mod-call btn-mod ">ЗВОРОТНІЙ
+                            ЗВ’ЯЗОК</a>
+                    </div>
+                </div>
+                <div class="part-img">
+                    <div class="img ">
+                        <img class="lazyload" data-src="./img/part-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block anim-blocks ">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </div>
 </main>
 <div class="backplate-menu"></div>
 

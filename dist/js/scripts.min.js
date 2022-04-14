@@ -583,3 +583,54 @@ function changeTab() {
 changeTab();
 //tabs
 //click events
+//sliders
+
+//prod slider
+
+//insta gallery
+let prodGallery = [...document.querySelectorAll('.product-slider.js-slider')];
+
+function prodSlider() {
+    if (!prodGallery.length) {
+
+    } else {
+        prodGallery.forEach((sld) => {
+            let sldCont = sld.querySelector('.product-slider__content');
+            let sldNext = sld.querySelector('.slides-btn--next');
+            let sldPrev = sld.querySelector('.slides-btn--prev');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                speed: 600,
+
+                autoplay: false,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+                    920: {
+                        slidesPerView: 2,
+                    },
+
+                }
+
+
+            });
+        })
+    }
+}
+
+prodSlider();
+
+//insta gallery
+//prod slider
+
+//sliders

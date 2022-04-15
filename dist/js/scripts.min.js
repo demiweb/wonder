@@ -138,9 +138,13 @@ var VisibleSqr = function (target, k) {
             // Если элемент полностью видно, то запускаем следующий код
             setTimeout(() => {
                 [...target.querySelectorAll('div')].forEach((bl) => {
-                    bl.classList.add('done')
+                    bl.classList.add('done');
+
                 });
                 target.classList.add('animed');
+                if (document.querySelector('.cultures-wrapper')) {
+                    document.querySelector('.cultures-wrapper').classList.add('move-line');
+                }
 
             }, 60)
 

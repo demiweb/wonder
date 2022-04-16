@@ -142,8 +142,8 @@ var VisibleSqr = function (target, k) {
 
                 });
                 target.classList.add('animed');
-                if (document.querySelector('.cultures-wrapper')) {
-                    document.querySelector('.cultures-wrapper').classList.add('move-line');
+                if (document.querySelector('.cultures-page')) {
+                    document.querySelector('.cultures-page').classList.add('move-line');
                 }
 
             }, 60)
@@ -178,6 +178,30 @@ jsAnimSqr.forEach((el, k) => {
 });
 
 //blocks
+//function grid width cultures page
+
+let gridBlocks = [...document.querySelectorAll('.grid-js')];
+let start = 1;
+
+function getGridBlocksStart() {
+    if (gridBlocks.length) {
+        gridBlocks.forEach((bl) => {
+            let width = Number(bl.dataset.param);
+            bl.style.setProperty('--wi', width);
+
+            let startPos = start;
+            bl.style.setProperty('--s', startPos);
+
+            let endPos = startPos + width;
+            bl.style.setProperty('--e', endPos);
+            start = endPos;
+        })
+    }
+}
+
+getGridBlocksStart();
+
+//function grid width
 
 new fullpage('#fullpage', {
     //options here
@@ -638,3 +662,4 @@ prodSlider();
 //prod slider
 
 //sliders
+

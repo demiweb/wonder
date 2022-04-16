@@ -1,0 +1,282 @@
+.cult-cont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 120px;
+  grid-area: 1 / 1 / 3 /5;
+
+  .sub-hero-sub {
+    padding-right: 50px;
+    max-width: none;
+  }
+}
+
+.cultures-hero__cont {
+  .pic {
+    overflow: hidden;
+    grid-area: 1 / 5 / 3 / 8;
+
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.about-culture {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.about-culture__head {
+  width: 100%;
+  top: 40px;
+  left: 0;
+  max-width: 734px;
+  position: absolute;
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    li {
+      width: 100%;
+      padding-left: 52px;
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 25px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+
+      a {
+        text-decoration: underline;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("../img/star-b.svg") no-repeat center / 100%;
+      }
+    }
+  }
+}
+
+.about-culture__cont {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  .block {
+    height: auto;
+    top: auto;
+    bottom: 0;
+    padding: 0;
+    border: none;
+
+    --v: 14;
+    --h: 2;
+
+    > * {
+      height: 118px;
+
+
+      --b: calc(var(--v) * var(--h));
+
+      &:nth-child(n) {
+        display: none !important;
+      }
+
+
+      &:nth-child(-n + 28) {
+        display: block !important;
+
+      }
+    }
+  }
+}
+
+.about-culture__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 10px;
+  --n: 14;
+  --h: 5;
+  --s: 118px;
+  grid-template-columns: repeat(var(--n), 1fr);
+  grid-template-rows: repeat(var(--h), var(--s));
+}
+
+.about-culture__single {
+  grid-area: 1 / var(--s) / 6 / var(--e);
+
+
+  display: grid;
+  grid-gap: 10px;
+  --h: 5;
+  --he: 118px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--h), var(--he));
+  position: relative;
+
+  &::before {
+    background: #47D7AC;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    content: '';
+    transition: all 0.34s ease-in;
+    z-index: 2;
+  }
+
+  &::after {
+    background: $yellow;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    height: calc((100% / 5) - (40px / 5));
+  }
+
+  &:hover {
+    &::before {
+      height: calc((100% / 5) - (40px / 5));
+      transition: all 0.34s ease-in;
+
+    }
+  }
+
+  &.active {
+    &::before {
+      height: calc((((100% / 5) - (40px / 5)) * 2) + 10px);
+      transition: all 0.34s ease-in;
+
+    }
+  }
+}
+
+.ab-culture__text {
+  z-index: 3;
+  grid-area: 5 / 1 / 6 / 2;
+
+  p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+  }
+}
+
+.ab-culture__images {
+  grid-area: 1 / 1 / 5 / 2;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .cult-cont {
+    padding-left: 60px;
+    grid-area: 1 / 1 /3 / 7;
+  }
+  .cultures-hero__cont {
+    .pic {
+      grid-area: 1 / 7 / 3 / 10;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .cult-cont {
+    padding-left: 30px;
+    grid-area: 1 / 1 /5 / 4;
+  }
+  .cultures-hero__cont {
+    .pic {
+      grid-area: 1 / 4 / 5/ 6;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .cult-cont {
+    padding-left: 30px;
+    grid-area: 1 / 1 /3 / 4;
+  }
+  .cultures-hero__cont {
+    .pic {
+      grid-area: 1 / 4 / 3/ 6;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .text-partners {
+    padding-left: 0;
+  }
+  .cult-cont {
+    padding-left: 10px;
+    grid-area: 2 / 1 /4 / 5;
+  }
+  .cultures-hero__cont {
+    .pic {
+      grid-area: 1 / 3 / 2/5;
+    }
+  }
+  .cultures-wrapper :not(.cultures-page) {
+    .cultures-hero.block-cont {
+      .cont-grid {
+        --n: 4;
+        --h: 3;
+      }
+
+      .block {
+        --v: 4;
+        --h: 3;
+
+        & > * {
+          &:nth-child(9n - 4) {
+            //opacity: 0;
+          }
+
+          --b: calc(var(--v) * var(--h));
+
+          &:nth-child(n) {
+            display: none !important;
+          }
+
+
+          &:nth-child(-n + 12) {
+            display: block !important;
+
+          }
+        }
+      }
+    }
+  }
+
+}

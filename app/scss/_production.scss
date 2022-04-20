@@ -120,6 +120,18 @@
   svg {
     width: 100%;
     height: auto;
+    path {
+      fill: rgba(255, 255, 255, 0)
+    }
+
+    #tp {
+      font-size: 265%;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.1;
+      text-transform: lowercase;
+      //letter-spacing: -0.052em;
+    }
   }
 }
 

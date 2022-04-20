@@ -947,7 +947,7 @@ a.number {
     content: '';
     background: url("../img/arr-r-big.svg") no-repeat center / 100%;
     transition: transform 0.3s ease;
-    transform: rotateX(90deg);
+    transform: rotateX(0);
   }
 
   &:hover {
@@ -956,7 +956,7 @@ a.number {
 
     &::after {
       transition: transform 0.3s ease;
-      transform: rotateX(0);
+      transform: rotateX(90deg);
     }
   }
 

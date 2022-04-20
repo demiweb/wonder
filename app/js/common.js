@@ -153,12 +153,14 @@ var VisibleDot = function (target, k) {
 };
 
 let textBigWords = document.querySelector('.big-words');
+
 function wrapWords() {
     if (textBigWords) {
         textBigWords.innerHTML = textBigWords.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     }
 }
+
 wrapWords();
 
 // Запускаем функцию при прокрутке страницы
@@ -657,6 +659,7 @@ function openModal() {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                checkVisibleMod();
                 let modal = document.querySelector(`.modal-window[data-type="${dataMod}"]`);
                 modal.classList.add('visible');
                 if (document.querySelector('#fullpage')) {
@@ -671,9 +674,18 @@ function openModal() {
     }
 }
 
+function checkVisibleMod() {
+    if (document.querySelector('.modal-window.visible')) {
+        document.querySelector('.modal-window.visible').classList.remove('visible');
+        document.querySelector('body').classList.remove('no-scroll');
+
+    }
+}
+
 openModal();
 let modBack = [...document.querySelectorAll('.modal-backplate')];
 let modClose = [...document.querySelectorAll('.modal-close')];
+let modClose2 = [...document.querySelectorAll('.mod-call.close')];
 
 function closeModal() {
     if (modBack.length) {
@@ -692,6 +704,20 @@ function closeModal() {
             })
         });
         modClose.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.modal-window').classList.remove('visible');
+                document.querySelector('body').classList.remove('no-scroll');
+
+                if (document.querySelector('#fullpage')) {
+                    fullpage_api.setAllowScrolling(true);
+                    fullpage_api.setKeyboardScrolling(true);
+
+                }
+            })
+        });
+        modClose2.forEach((btn) => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();

@@ -55,6 +55,28 @@ function allLozadImg() {
 }
 
 allLozadImg();
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.mission-video p');
+
+function startTextHide() {
+    if (textWrapper) {
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter' style='opacity: 0'>$&</span>");
+        anime.timeline({loop: false})
+            .add({
+                targets: '.mission-video p .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 850,
+                delay: (el, i) => 150 * (i + 1)
+            });
+    }
+}
+
+startTextHide();
+
+
 //full scroll script
 let dotText = [...document.querySelectorAll('main .dot')];
 let objDots = {};
@@ -130,16 +152,37 @@ var VisibleDot = function (target, k) {
 
 };
 
+let textBigWords = document.querySelector('.big-words');
+function wrapWords() {
+    if (textBigWords) {
+        textBigWords.innerHTML = textBigWords.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    }
+}
+wrapWords();
 
 // Запускаем функцию при прокрутке страницы
+let circleRotate = document.querySelector('.about-img svg');
 window.addEventListener('scroll', function () {
     jsAnimDots.forEach((el, k) => {
         setTimeout(() => {
             VisibleDot(el, k);
         }, k * 30)
-    })
+    });
+
+    rotateCircle();
+
 
 });
+
+function rotateCircle() {
+    if (circleRotate) {
+        let pageO = window.pageYOffset;
+        let rot = pageO / 8;
+        circleRotate.style.setProperty(`transform`, `translate(-50%, -50%) rotate(${rot}deg`)
+
+    }
+};
 
 // А также запустим функцию сразу. А то вдруг, элемент изначально видно
 

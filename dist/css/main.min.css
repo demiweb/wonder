@@ -454,6 +454,53 @@ main {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.demiweb {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+  padding: 6px;
+  border: 1px solid #d9d9d9;
+  color: #000; }
+  .demiweb p {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000; }
+  .demiweb img {
+    margin-left: 6px;
+    padding: 10px;
+    position: relative;
+    background: #000;
+    -webkit-transition: -webkit-filter 0.3s ease;
+    transition: -webkit-filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
+    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+    -webkit-filter: invert(1);
+            filter: invert(1); }
+  .demiweb:hover {
+    text-decoration: underline; }
+    .demiweb:hover img {
+      -webkit-filter: invert(0);
+              filter: invert(0);
+      -webkit-transition: -webkit-filter 0.3s ease;
+      transition: -webkit-filter 0.3s ease;
+      -o-transition: filter 0.3s ease;
+      transition: filter 0.3s ease;
+      transition: filter 0.3s ease, -webkit-filter 0.3s ease; }
+
 .block {
   --v: 6;
   --h: 3;

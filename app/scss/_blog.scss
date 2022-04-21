@@ -533,17 +533,7 @@
     .product-slider__content {
       position: relative;
 
-      &::after {
-        width: 13%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-        display: inline-block;
-        content: '';
-        position: absolute;
-        backdrop-filter: blur(7px);
-      }
+
     }
   }
 }

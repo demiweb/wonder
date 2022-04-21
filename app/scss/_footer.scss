@@ -219,6 +219,7 @@
     justify-content: flex-start;
 
     input, textarea {
+      appearance: none;
       width: 100%;
       background: none;
       padding: 20px 0;
@@ -231,6 +232,7 @@
       line-height: 21px;
       color: #000;
       resize: none;
+      border-radius: 0 !important;
 
       &::placeholder {
         font-style: normal;
@@ -346,7 +348,6 @@
 
   &:hover {
     border: 2px solid #000;
-    border-radius: 6px;
     padding: 5px;
     transition: border 0.3s ease, padding 0.3s ease, border-radius 0.3s ease, border-color 0.3s ease;
 

@@ -68,6 +68,17 @@
       }
     }
   }
+  &:hover {
+    img, svg {
+      transition-delay: 0s;
+      .plan {
+        transform: rotate(-23.44deg);
+        transition-delay: 0s;
+        transform-origin: 29% 51%;
+        transition: transform 0.6s ease;
+      }
+    }
+  }
 
 }
 

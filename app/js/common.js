@@ -596,6 +596,18 @@ hoverProdHome();
 
 //dots text writing
 //click events
+
+$('.anim-start .company-stat__text ul li p small').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
 //seo btn
 
 let seoBtn = [...document.querySelectorAll('.seo-btn')];

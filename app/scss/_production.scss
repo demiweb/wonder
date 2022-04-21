@@ -146,7 +146,7 @@
     }
 
     #tp {
-      font-size: 305%;
+      font-size: 288%;
       font-weight: 600;
       color: #000;
       line-height: 1.1;
@@ -492,6 +492,18 @@
 
     &.mini {
       grid-area: 1/ 6 / 4 / 8;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        display: inline-block;
+        content: '';
+        opacity: 0.3;
+      }
     }
   }
 
@@ -609,19 +621,18 @@
         align-items: flex-end;
         justify-content: flex-end;
 
-        font-style: normal;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 0.8;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
         color: #000000;
 
         small {
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 100%;
           color: #000000;
-          padding-left: 19px;
+          padding-right: 19px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 0.8;
         }
       }
 
@@ -692,7 +703,7 @@
 
 @media screen and (max-width: 1640px) {
   .wrap-circle svg #tp {
-    font-size: 219%;
+    font-size: 203%;
   }
   .company-stat__cont {
     height: 590px;
@@ -712,7 +723,9 @@
         margin-bottom: 35px;
 
         p {
-          font-size: 52px;
+          small {
+            font-size: 52px;
+          }
         }
       }
     }
@@ -799,7 +812,9 @@
         }
 
         p {
-          font-size: 46px;
+          small{
+            font-size: 46px;
+          }
         }
 
         &::before {
@@ -921,7 +936,9 @@
         }
 
         p {
-          font-size: 42px;
+          small{
+            font-size: 42px;
+          }
 
         }
       }
@@ -1045,7 +1062,9 @@
         }
 
         p {
-          font-size: 42px;
+          small{
+            font-size: 42px;
+          }
 
         }
       }
@@ -1206,11 +1225,12 @@
 
       li {
         p {
-          font-size: 34px;
 
+          font-size: 14px;
           small {
-            padding-left: 5px;
-            font-size: 14px;
+            padding-right: 5px;
+
+            font-size: 34px;
           }
         }
       }
@@ -1244,7 +1264,9 @@
         }
 
         p {
-          font-size: 42px;
+          small{
+            font-size: 42px;
+          }
 
         }
       }
@@ -1477,11 +1499,11 @@
 
         p {
 
-          font-size: 18px;
+          font-size: 10px;
 
           small {
-            padding-left: 5px;
-            font-size: 10px;
+            padding-right: 5px;
+            font-size: 18px;
           }
         }
       }

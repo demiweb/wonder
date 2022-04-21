@@ -164,7 +164,7 @@ function wrapWords() {
 wrapWords();
 
 // Запускаем функцию при прокрутке страницы
-let circleRotate = document.querySelector('.about-img svg');
+let circleRotate = document.querySelector('.about-img .about-img__cont > svg');
 window.addEventListener('scroll', function () {
     jsAnimDots.forEach((el, k) => {
         setTimeout(() => {

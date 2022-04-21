@@ -141,11 +141,12 @@
                     <p>Наш продукт — сучасні мінеральні добрива високої якості. Це збалансоване харчування для
                         рослин.</p>
                 </div>
-                <div class="hero-star__text" id="wrap">
-                    <svg version="1.1" id="ellipse" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                         y="0px"
-                         viewBox="0 0 602 352" style="enable-background:new 0 0 602 352;" xml:space="preserve">
+                <div class="hero-star__text" >
+                    <div class="wrap-circle" id="wrap">
+                        <svg version="1.1" id="ellipse" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px"
+                             viewBox="0 0 602 352" style="enable-background:new 0 0 602 352;" xml:space="preserve">
 <style type="text/css">
 	.st0 {
         fill: none;
@@ -154,15 +155,15 @@
         stroke-miterlimit: 10;
     }
 </style>
-                        <path id="motion"
-                              d="M52.7,176.1C62.5,2.9,525.9-6.2,543.9,175.5C539.3,343.3,70.1,367.9,52.7,176.1z"/>
-                        <path stroke="red" stroke-width="2"
-                              d="M87.7,283A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283 A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283"></path>
+                            <path id="motion"
+                                  d="M52.7,176.1C62.5,2.9,525.9-6.2,543.9,175.5C539.3,343.3,70.1,367.9,52.7,176.1z"/>
+                            <path  stroke-width="2"
+                                   d="M87.7,283A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283 A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283"></path>
 
 
-                        <!--                        <ellipse id="motion" cx="301" cy="176" rx="260" ry="150" stroke="#000"/>-->
-                        <!--&lt;!&ndash;                        <path  d="M125,25 a95,95 0 1,1 0,190" />&ndash;&gt;-->
-                        <text xml:space="preserve">
+                            <!--                        <ellipse id="motion" cx="301" cy="176" rx="260" ry="150" stroke="#000"/>-->
+                            <!--&lt;!&ndash;                        <path  d="M125,25 a95,95 0 1,1 0,190" />&ndash;&gt;-->
+                            <text xml:space="preserve">
 
 		<textPath href="#motion" alignment-baseline="baseline" startOffset="15" id="tp" side="right"><tspan>WONDER WONDER   WONDER WONDER WONDER WONDER   WONDER WONDER</tspan>
 
@@ -172,56 +173,58 @@
 	</text>
 
 </svg>
-                    <script>
-                        function Init() {
-                            let w = wrap.clientWidth;
-                            let h = wrap.clientHeight;
-                            ellipse.setAttributeNS(null, "viewBox", `0 0 ${w}  ${h}`);
-                            let d = `M${w / 10},${h / 2}A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 *
-                            w /
-                            10} ${5 * h / 10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 *
-                            h /
-                            10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} A${4 *
-                            w /
-                            10},${4 * h / 10} 0 0 0 ${w / 10} ${5 * h / 10}`;
-                            console.log(d);
+                        <script>
+                            function Init() {
+                                let w = wrap.clientWidth;
+                                let h = wrap.clientHeight;
+                                ellipse.setAttributeNS(null, "viewBox", `0 0 ${w}  ${h}`);
+                                let d = `M${w / 10},${h / 2}A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 *
+                                w /
+                                10} ${5 * h / 10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 *
+                                h /
+                                10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} A${4 *
+                                w /
+                                10},${4 * h / 10} 0 0 0 ${w / 10} ${5 * h / 10}`;
+                                console.log(d);
 
-                            motion.setAttributeNS(null, "d", d);
-                            let path_length = motion.getTotalLength();
-
-
-                            //begin at a bigger size than needed
-                            // let font_size = 100;
-                            // ellipse.style.fontSize = font_size+"px";
-                            //
-                            // // while the text length is bigger than half path length
-                            // while(tp.getComputedTextLength() > path_length / 2 ){
-                            //     //reduce the font size
-                            //     font_size -=.25;
-                            //     //reset the font size
-                            //     ellipse.style.fontSize = font_size+"px";
-                            // }
-                        }
+                                motion.setAttributeNS(null, "d", d);
+                                let path_length = motion.getTotalLength();
 
 
-                        window.setTimeout(function () {
-                            Init();
-                            window.addEventListener("resize", Init, false);
-                        }, 15);
-
-                        let so = 0;
-
-                        function Marquee() {
-                            requestAnimationFrame(Marquee);
-                            tp.setAttributeNS(null, "startOffset", so + "%");
-                            if (so >= 50) {
-                                so = 0;
+                                // begin at a bigger size than needed
+                                // let font_size = 100;
+                                // ellipse.style.fontSize = font_size+"px";
+                                //
+                                // // while the text length is bigger than half path length
+                                // while(tp.getComputedTextLength() > path_length / 2 ){
+                                //     //reduce the font size
+                                //     font_size -=.25;
+                                //     //reset the font size
+                                //     ellipse.style.fontSize = font_size+"px";
+                                // }
                             }
-                            so += 0.02;
-                        }
 
-                        Marquee();
-                    </script>
+
+                            window.setTimeout(function () {
+                                Init();
+                                // window.addEventListener("resize", Init, false);
+                            }, 15);
+
+                            let so = 0;
+
+                            function Marquee() {
+                                requestAnimationFrame(Marquee);
+                                tp.setAttributeNS(null, "startOffset", so + "%");
+                                if (so >= 50) {
+                                    so = 0;
+                                }
+                                so += 0.02;
+                            }
+
+                            Marquee();
+                        </script>
+                    </div>
+
 
                 </div>
             </div>
@@ -1229,7 +1232,7 @@ WONDER <br>може так
         </div>
     </div>
 </div>
-<div data-type="thanks" class="modal-window modal-thanks visible ">
+<div data-type="thanks" class="modal-window modal-thanks  ">
     <div class="modal-backplate">
 
     </div>
@@ -1248,7 +1251,8 @@ WONDER <br>може так
 Дякуємо
             </span>
             <div class="star black">
-                <p>Замовте зворотній зв’язок і наші менеджери зв’яжуться з вами в найближчий час!</p>
+                <p>Ми пишаємося Вами і дякуємо за співпрацю!
+                    І Земля точно тішиться цим також.</p>
             </div>
             <button class="mod-call  close">Продовжити</button>
 

@@ -197,6 +197,88 @@
                             wonder_wonder_wonder_wonder_wonder_wonder_wonder_wonder
 
                         </div>
+                        <div class="wrap-circle" id="wrap">
+                            <svg version="1.1" id="ellipse" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                 y="0px"
+                                 viewBox="0 0 602 352" style="enable-background:new 0 0 602 352;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+    }
+</style>
+                                <path id="motion"
+                                      d="M52.7,176.1C62.5,2.9,525.9-6.2,543.9,175.5C539.3,343.3,70.1,367.9,52.7,176.1z"/>
+                                <path  stroke-width="2"
+                                       d="M87.7,283A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283 A350.8,226.4 0 0 0 789.3 283 A350.8,226.4 0 0 0 87.7 283"></path>
+
+
+                                <!--                        <ellipse id="motion" cx="301" cy="176" rx="260" ry="150" stroke="#000"/>-->
+                                <!--&lt;!&ndash;                        <path  d="M125,25 a95,95 0 1,1 0,190" />&ndash;&gt;-->
+                                <text xml:space="preserve">
+
+		<textPath href="#motion" alignment-baseline="baseline" startOffset="15" id="tp"lengthAdjust="spacingAndGlyphs"><tspan lengthAdjust="spacingAndGlyphs">WONDER WONDER   WONDER WONDER WONDER WONDER   WONDER WONDER</tspan>
+
+            <!--            <animate attributeName="startOffset" from="0%" to ="140%" begin="0s" dur="16s" repeatCount="indefinite"/>-->
+
+        </textPath>
+	</text>
+
+</svg>
+                            <script>
+                                function Init() {
+                                    let w = wrap.clientWidth;
+                                    let h = wrap.clientHeight;
+                                    ellipse.setAttributeNS(null, "viewBox", `0 0 ${w}  ${h}`);
+                                    let d = `M${w / 10},${h / 2}A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 *
+                                    w /
+                                    10} ${5 * h / 10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${w / 10} ${5 *
+                                    h /
+                                    10} A${4 * w / 10},${4 * h / 10} 0 0 0 ${9 * w / 10} ${5 * h / 10} A${4 *
+                                    w /
+                                    10},${4 * h / 10} 0 0 0 ${w / 10} ${5 * h / 10}`;
+                                    console.log(d);
+
+                                    motion.setAttributeNS(null, "d", d);
+                                    let path_length = motion.getTotalLength();
+
+
+                                    // begin at a bigger size than needed
+                                    // let font_size = 100;
+                                    // ellipse.style.fontSize = font_size+"px";
+                                    //
+                                    // // while the text length is bigger than half path length
+                                    // while(tp.getComputedTextLength() > path_length / 2 ){
+                                    //     //reduce the font size
+                                    //     font_size -=.25;
+                                    //     //reset the font size
+                                    //     ellipse.style.fontSize = font_size+"px";
+                                    // }
+                                }
+
+
+                                window.setTimeout(function () {
+                                    Init();
+                                    // window.addEventListener("resize", Init, false);
+                                }, 15);
+
+                                let so = 0;
+
+                                function Marquee() {
+                                    requestAnimationFrame(Marquee);
+                                    tp.setAttributeNS(null, "startOffset", so + "%");
+                                    if (so >= 50) {
+                                        so = 0;
+                                    }
+                                    so += 0.02;
+                                }
+
+                                Marquee();
+                            </script>
+                        </div>
                         <svg width="298" height="306" viewBox="0 0 298 306" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M149.349 88.3214L149 86L148.651 88.3214C143.238 121.536 117.921 147.607 85.2698 153.143L83 153.5L85.2698 153.857C117.746 159.393 143.238 185.286 148.651 218.679L149 221L149.349 218.679C154.762 185.464 180.079 159.393 212.73 153.857L215 153.5L212.73 153.143C180.254 147.607 154.762 121.536 149.349 88.3214Z" fill="#FFD60B"/>
                             <path d="M149 0C66.8411 0 0 68.6355 0 153C0 237.364 66.8411 306 149 306C231.159 306 298 237.364 298 153C298 68.6355 231.333 0 149 0ZM277.286 142.097L232.203 136.02C228.548 93.3014 211.315 54.1577 184.161 25.7383C234.814 40.5736 272.935 86.5093 277.286 142.097ZM211.489 133.339L186.772 129.943C178.939 128.513 172.847 122.257 171.454 114.214L161.01 32.1729C188.861 56.66 206.964 92.9439 211.489 133.339ZM137.164 32.3516L126.72 114.393C125.327 122.436 119.235 128.692 111.402 130.121L86.6846 133.339C91.2103 92.9439 109.487 56.66 137.164 32.3516ZM114.013 25.7383C86.8586 54.1577 69.6262 93.3014 65.9708 136.02L20.7138 142.097C25.2395 86.5093 63.3598 40.5736 114.013 25.7383ZM20.8878 163.724L66.1449 169.801C69.8002 212.52 87.0327 251.664 114.187 280.083C63.3598 265.426 25.2395 219.312 20.8878 163.724ZM86.6846 172.661L111.402 175.878C119.235 177.308 125.327 183.564 126.72 191.607L137.164 273.648C109.487 249.34 91.2103 212.877 86.6846 172.661ZM151.263 188.748L149 206.085L146.737 188.748C146.737 188.569 146.737 188.569 146.737 188.39C143.952 171.41 131.071 158.183 114.535 155.324C114.361 155.324 114.361 155.324 114.187 155.324L97.3026 153L114.187 150.676C114.361 150.676 114.361 150.676 114.535 150.676C131.071 147.817 143.952 134.59 146.737 117.61C146.737 117.431 146.737 117.431 146.737 117.252L149 99.9147L151.263 117.252C151.263 117.431 151.263 117.431 151.263 117.61C154.048 134.59 166.929 147.817 183.465 150.676C183.639 150.676 183.639 150.676 183.813 150.676L200.697 153L183.813 155.324C183.639 155.324 183.639 155.324 183.465 155.324C166.929 158.183 154.048 171.41 151.263 188.39C151.263 188.39 151.263 188.569 151.263 188.748ZM161.01 273.648L171.454 191.607C172.847 183.564 178.939 177.308 186.772 175.878L211.489 172.482C206.964 212.877 188.861 249.34 161.01 273.648ZM184.161 280.083C211.315 251.664 228.548 212.52 232.203 169.801L277.286 163.724C272.935 219.312 234.814 265.248 184.161 280.083Z" fill="black"/>
@@ -554,7 +636,7 @@
         </div>
     </div>
 </div>
-<div data-type="thanks" class="modal-window modal-thanks visible ">
+<div data-type="thanks" class="modal-window modal-thanks  ">
     <div class="modal-backplate">
 
     </div>
@@ -573,7 +655,8 @@
 Дякуємо
             </span>
             <div class="star black">
-                <p>Замовте зворотній зв’язок і наші менеджери зв’яжуться з вами в найближчий час!</p>
+                <p>Ми пишаємося Вами і дякуємо за співпрацю!
+                    І Земля точно тішиться цим також.</p>
             </div>
             <button class="mod-call  close">Продовжити</button>
 

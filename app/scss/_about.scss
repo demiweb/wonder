@@ -108,7 +108,8 @@
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(-12deg);
   transform-origin: 50% 50%;
-  animation: rotateWords 13s linear infinite;
+  animation: rotateWords 26s linear infinite;
+
   span {
     font-size: 320%;
     line-height: 1;
@@ -132,13 +133,14 @@
     }
   }
 }
+
 @keyframes rotateWords {
   0% {
     transform: translate(-50%, -50%) rotate(-12deg);
   }
-   100% {
-     transform: translate(-50%, -50%) rotate(348deg);
-   }
+  100% {
+    transform: translate(-50%, -50%) rotate(348deg);
+  }
 }
 
 .about-img__cont {
@@ -152,7 +154,16 @@
   top: 120px;
   overflow: hidden;
 
-  svg {
+  .wrap-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(23.44deg);
+  }
+
+  > svg {
+    width: 27% !important;
+    height: 27% !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -459,6 +470,9 @@
 }
 
 @media screen and (max-width: 1450px) {
+  .big-words span {
+    font-size: 240%;
+  }
   .target__bg .img-m.img-m--2 {
     right: 41%;
     height: 94%;
@@ -541,6 +555,12 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .about-img .wrap-circle svg #tp {
+    font-size: 140%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .target-stars {
     padding-left: 40px;
@@ -550,6 +570,11 @@
 }
 
 @media screen and (max-width: 1050px) {
+  .about {
+    position: relative;
+    overflow: hidden;
+  }
+
   .target__wrap {
     --s: 130px;
 
@@ -624,8 +649,17 @@
     margin-top: 20px;
   }
   .about-img {
-    display: none;
-    grid-area: 1 / 7 / 2 / 10;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding-top: 0;
+    .wrap-circle {
+      display: none;
+    }
   }
   .about-content {
     padding-left: 0;
@@ -805,8 +839,12 @@
     margin-top: 20px;
   }
   .about-img {
-    display: none;
+    width: 200px;
+    height: 200px;
     grid-area: 1 / 7 / 2 / 10;
+  }
+  .big-words span {
+    font-size: 20px;
   }
   .about-content {
     padding-left: 0;
@@ -860,6 +898,9 @@
 }
 
 @media screen and (max-width: 540px) {
+  .about-text p {
+    font-size: 14px;
+  }
   .target-stars {
     padding-left: 32px;
     margin-top: 20px;

@@ -400,20 +400,33 @@
         img {
           width: calc(100% + 1px);
           height: calc(100% + 1px);
-          background: #fff;
-          border-radius: 50%;
-          transition: filter 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-          border: 1px solid #fff;
+         }
 
-        }
 
-        &:hover {
+      }
+    }
+  }
+}
+.footer {
+  .header-soc {
+    ul {
+      li {
+        a {
           img {
-            filter: invert(1);
-            border: 1px solid #fff;
-            background-color: #fff;
+            //background: #fff;
+            border-radius: 50%;
             transition: filter 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+            //border: 1px solid #000;
+            box-sizing: border-box;
+            overflow: hidden;
+          }
+          &:hover {
+            img {
+              filter: invert(73%) sepia(60%) saturate(435%) hue-rotate(106deg) brightness(92%) contrast(87%);
+              //background-color: #fff;
+              transition: filter 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 
+            }
           }
         }
       }

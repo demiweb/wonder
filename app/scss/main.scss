@@ -53,7 +53,9 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
-
+body {
+  //cursor: url("../img/nav-ar.svg"), auto;
+}
 
 img.lazyload, video.lazyload {
   opacity: 0;
@@ -90,7 +92,7 @@ img.lazyload, video.lazyload {
   }
 
   &.anim-bot {
-    transform: translate(0, -40%);
+    transform: translate(0, -30%);
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.110, 0.620, 0.20, 0.985), background-color 0.3s ease;
   }
@@ -383,3 +385,4 @@ body {
 @import 'contacts';
 
 @import "media";
+@import "dop-style";

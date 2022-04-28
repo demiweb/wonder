@@ -1050,6 +1050,9 @@ a.number {
 }
 
 @media screen and (max-width: 1550px) {
+  .sub-hero-sub {
+    max-width: 645px;
+  }
   a.mail {
     font-size: 22px;
     line-height: 1.2;

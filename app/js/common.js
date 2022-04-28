@@ -598,7 +598,7 @@ hoverProdHome();
 //click events
 
 $('.anim-start .company-stat__text ul li p small').each(function () {
-    $(this).prop('Counter',0).animate({
+    $(this).prop('Counter', 0).animate({
         Counter: $(this).text()
     }, {
         duration: 2000,
@@ -782,6 +782,36 @@ function changeTab() {
 }
 
 changeTab();
+
+let accordBtn = [...document.querySelectorAll('.accord-btn')];
+
+function mobileAccord() {
+    if (accordBtn.length) {
+        accordBtn.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                tabBtn[k].click();
+
+
+                if (btn.closest('.item-tab').classList.contains('visible')) {
+                    btn.closest('.item-tab').classList.remove('visible');
+
+                } else {
+                    accordBtn.forEach((btn2, l) => {
+                        if (l === k) {
+                            btn2.closest('.item-tab').classList.add('visible');
+                        } else {
+                            btn2.closest('.item-tab').classList.remove('visible');
+                        }
+                    })
+                }
+
+
+            })
+        })
+    }
+}
+
+mobileAccord();
 //tabs
 //click events
 //sliders

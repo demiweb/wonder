@@ -467,10 +467,88 @@
 
 </main>
 <div class="backplate-menu"></div>
+<div class="swiper speakers-slider">
+    <div class="swiper-wrapper speakers-slider__wrapper">
 
+        <div class="swiper-slide speakers-slider__slide">
+            <a href="https://academy.demiweb.pro/author/volodymyr-voznyak/" class="card">
+                <div class="slide__img">
+                    <img src="https://academy.demiweb.pro/wp-content/uploads/2022/04/img_0106-scaled-e1589377102753-319x361.jpeg" alt="" class="lazyload">
+                </div>
+                <div class="slide__content">
+                                            <span>
+                                                  Volodymyr Voznyak                                            </span>
+                    <p>
+                        MD, PhD                                            </p>
+                    <div class="slide__info">
+                        <div>
+                            <img src="https://academy.demiweb.pro/wp-content/themes/academy/img/svg/graduation-cap.svg" alt="icon" class="lazyload">
+                            <span>
+                                                        1                                                        courses                                                    </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-slide speakers-slider__slide">
+            <a href="https://academy.demiweb.pro/author/volodymyr-smolanka/" class="card">
+                <div class="slide__img">
+                    <img src="https://academy.demiweb.pro/wp-content/uploads/2022/04/20150911_1877_smolanka1-e1651145993276-319x361.jpeg" alt="" class="lazyload">
+                </div>
+                <div class="slide__content">
+                                            <span>
+                                                  Volodymyr Smolanka                                            </span>
+                    <p>
+                        Doctor of Medicine                                            </p>
+                    <div class="slide__info">
+                        <div>
+                            <img src="https://academy.demiweb.pro/wp-content/themes/academy/img/svg/graduation-cap.svg" alt="icon" class="lazyload">
+                            <span>
+                                                        1                                                        courses                                                    </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+    <div class="swiper-pagination speakers-slider__pagination def-pagination"></div>
+</div>
 //= details/footer.html
 //= details/scripts.html
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+<script>
+    let speakersSlider = new Swiper(".speakers-slider", {
+        direction: "horizontal",
+        loop: !1,
+        autoplay: !0,
+        spaceBetween: 30,
+        breakpoints: {
+            1400: {slidesPerView: 4, watchOverflow: !0},
+            991: {slidesPerView: 3, pagination: {el: ".speakers-slider__pagination", clickable: !0}, watchOverflow: !1},
+            767: {slidesPerView: 2, pagination: {el: ".speakers-slider__pagination", clickable: !0}, watchOverflow: !1},
 
+
+            0: {
+                slidesPerView: 1,
+                pagination: {el: ".speakers-slider__pagination", clickable: !0},
+                watchOverflow: !1,
+                spaceBetween: 0
+            },
+
+        },
+        on: {
+            init() {
+                this.el.addEventListener("mouseenter", (() => {
+                    this.autoplay.stop()
+                })), this.el.addEventListener("mouseleave", (() => {
+                    this.autoplay.start()
+                }))
+            }
+        }
+    });
+</script>
 </body>
 </html>

@@ -606,7 +606,7 @@
   padding-right: 45px;
   display: block;
 
-  p {
+  p, li {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -622,7 +622,14 @@
       font-weight: 600;
     }
   }
-
+  blockquote {
+    margin: 25px 0;
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    p {
+      font-weight: 500;
+    }
+  }
   img.alignright {
     float: right;
     margin: 0 0 40px 40px;
@@ -646,7 +653,31 @@
       margin-top: 0;
     }
   }
-
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 30px;
+  }
+  a {
+    text-decoration: underline;
+    color: $blue;
+  }
+  ul {
+    margin: 20px 0;
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 18px;
+      &::before {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        content: '';
+        background: url("../img/star-b.svg") no-repeat center/100%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+    }
+  }
   img {
     width: auto;
     height: auto;
@@ -845,9 +876,14 @@
   .article-blog, .article-product {
     margin-bottom: 40px;
   }
-  .article-content p {
+  .article-content p, .article-content li {
     font-size: 16px;
     line-height: 1.2;
+  }
+  .article-content ul li {
+    &::before {
+      top: 3px;
+    }
   }
   .article-blog, .article-product {
 
@@ -1095,10 +1131,21 @@
   .article-blog, .article-product {
     margin-bottom: 25px;
   }
-  .article-content p {
+  .article-content p, .article-content li {
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: 20px;
+  }
+  .article-content {
+    font-size: 13px;
+  }
+  .article-content ul li {
+    margin-bottom: 5px;
+    &::before {
+      top: 3px;
+      width: 12px;
+      height: 12px;
+    }
   }
   .blog {
     .container {

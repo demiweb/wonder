@@ -55,6 +55,14 @@ function allLozadImg() {
 }
 
 allLozadImg();
+let homePartners = [...document.querySelectorAll('.home .partners-block')];
+function removePartnersClass() {
+    if (homePartners.length) {
+        homePartners.forEach((btn) => {
+            btn.classList.remove('partners-block');
+        })
+    }
+}
 
 
 // Wrap every letter in a span
@@ -302,6 +310,7 @@ new fullpage('#fullpage', {
 
     responsiveWidth: 850,
     afterLoad: function () {
+
         dotText = [...document.querySelectorAll('.section.active .dot')];
         dotText.forEach((it, k) => {
             let dat = it.dataset.dots;
@@ -686,6 +695,19 @@ function openModal() {
     }
 }
 
+document.addEventListener('wpcf7mailsent', function (event) {
+    checkVisibleMod();
+    let modal = document.querySelector(`.modal-window[data-type="thanks"]`);
+    modal.classList.add('visible');
+    if (document.querySelector('#fullpage')) {
+        fullpage_api.setAllowScrolling(false);
+        fullpage_api.setKeyboardScrolling(false);
+
+    }
+    document.querySelector('body').classList.add('no-scroll');
+}, false);
+
+
 function checkVisibleMod() {
     if (document.querySelector('.modal-window.visible')) {
         document.querySelector('.modal-window.visible').classList.remove('visible');
@@ -956,4 +978,29 @@ prodSlider3();
 //prod slider3
 
 //sliders
+
+//open men
+
+let subLink = [...document.querySelectorAll('.header-menu .menu-item-has-children > a')];
+
+function openSubMenu() {
+    if (subLink.length) {
+        subLink.forEach((btn) => {
+            if (window.innerWidth > 610) {
+
+            } else {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    btn.closest('li').classList.toggle('vis');
+                })
+            }
+
+        })
+    }
+}
+
+openSubMenu();
+
+//open men
 

@@ -400,13 +400,14 @@
         img {
           width: calc(100% + 1px);
           height: calc(100% + 1px);
-         }
+        }
 
 
       }
     }
   }
 }
+
 .footer {
   .header-soc {
     ul {
@@ -420,6 +421,7 @@
             box-sizing: border-box;
             overflow: hidden;
           }
+
           &:hover {
             img {
               filter: invert(73%) sepia(60%) saturate(435%) hue-rotate(106deg) brightness(92%) contrast(87%);
@@ -444,8 +446,19 @@
     height: 100%;
     gap: 50px;
 
+
     li {
       height: 100%;
+      position: relative;
+
+      &:hover {
+        ul {
+          opacity: 1;
+          pointer-events: auto;
+          transition: opacity 0.4s ease;
+
+        }
+      }
 
       a {
         height: 100%;
@@ -490,8 +503,39 @@
 
           }
         }
+
+      }
+      &.current-menu-parent > a, &.current-menu-item > a {
+        &::before {
+          height: 60%;
+        }
       }
     }
+
+    ul {
+      width: auto;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+
+      li {
+
+        a {
+          padding: 12px;
+
+          white-space: nowrap;
+        }
+
+        box-sizing: border-box;
+      }
+    }
+
+
   }
 }
 
@@ -559,6 +603,16 @@
 }
 
 @media screen and (max-width: 950px) {
+  .header-menu {
+    > ul {
+      li.vis {
+        ul {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
   body header.header .header__block {
     transform: initial !important;
   }
@@ -635,6 +689,19 @@
 }
 
 @media screen and (max-width: 610px) {
+  .header-menu > ul li.wpml-ls-current-language a::before{
+    height: 60%;
+  }
+  .header-menu > ul li.wpml-ls-current-language {
+    ul {
+      max-height: 200px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  .header-menu > ul li a {
+    height: auto;
+  }
   .header-menu > ul {
     gap: 0;
     flex-direction: column;
@@ -644,6 +711,25 @@
     li {
       height: auto;
       width: 100%;
+
+      ul {
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        border: none;
+        padding-left: 12px;
+        transition: max-height 0.5s ease, opacity 0.4s ease;
+      }
+
+      &.vis {
+        ul {
+          pointer-events: auto !important;
+          max-height: 250px;
+          transition: max-height 0.5s ease, opacity 0.4s ease;
+
+        }
+      }
 
       a {
         width: 100%;
@@ -745,8 +831,9 @@
   .header-menu {
     //min-height: calc(100vh - 60px);
     max-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
     min-height: 0;
-    height: 100%;
+    //height: 100%;
   }
   .header-nav__block-list {
     ul {

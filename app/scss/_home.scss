@@ -190,6 +190,14 @@ body {
           .header-menu > ul li a {
             color: #fff;
           }
+          .header-menu > ul {
+            ul {
+              background: #fff;
+              a {
+                color: #000;
+              }
+            }
+          }
         }
       }
     }
